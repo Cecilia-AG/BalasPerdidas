@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Votos</title>
+<meta charset="utf-8">
+  <link rel="stylesheet" type="text/css"href="css/style.css">
+</head>
+<body>
+<header class="header">
+  <nav>
+    <div>
+      <ul>
+        <li><a href="Suma.html">Suma</a></li>
+        <li><a href="Factorial.html">Factorial</a></li>
+        <li><a href="Calculadora.html">Calculadora</a></li>
+        <li><a href="Cajas.html">Cajas</a></li>
+         <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+	<style type="text/css">
+		body{
+			text-align: center;
+     
+		}
+    span{
+      font-size: 28px;
+      color: white;
+    }
+    form{
+      background-color: grey;
+      margin-top: 5%;
+      width: 30%;
+      border-radius: 2em;
+      padding: 2%;
+    }
+    select{
+      border-radius: .1em;
+      border: none;
+    }
+    input[type="text"] {
+      background-color: white;
+      border-bottom-color: #18181B;
+      border-top-color: transparent;
+       border-left-color: transparent;
+        border-right-color: transparent;
+        width: 80%;
+        text-align: center;
+        cursor: pointer;
+    }
+    input[type="text"]:hover {
+      background-color: white;
+      border-bottom-color: #18181B;
+      border-top-color: transparent;
+       border-left-color: transparent;
+        border-right-color: transparent;
+        width: 80%;
+        border-bottom-width: 90%;
+        text-align: center;
+       
+
+    }
+    input[type="submit"]{
+      width: 30%;
+      height: 20%;
+
+      border-radius: 1em;
+      cursor: pointer;
+
+    }
+	</style>
+  <center>
+
+
+<form name="frmDatos">
+  <span>Votaciones</span><br><br>
+
+
+	<input type="text" name="nombre" placeholder="Ingrese su Nombre y Apellidos"><br><br>
+	<input type="text" name="ciudad" placeholder="Ingrese su ciudad"><br><br>
+	<select name="secciones" id="secciones"> 
+		<option>Seleccione una opcion...</option>
+		<option value="Norte">Centro</option>
+		<option value="Sur">Norte</option>
+		<option value="Centro">Sur</option>
+		
+	</select><br><br>
+	<input type="text" name="cp" placeholder="Ingrese su CP"><br><br>
+	<label>Ingresa la letra del grupo de musica que más te gusta:</label><br><br>
+	<label>A.Morat <br>B.DVCIO <br>C.Moderato <br>D.Los temerarios</label><br><br><br>
+	<input type="text" name="grupo" placeholder="Ingrese la letra del grupo de musica"><br><br>
+<input type="submit" name="emite" value="Enviar voto" onclick="emitir(this.value);">
+</form>
+
+
+
+</center>
+
+<script>
+function emitir() {
+	var nombre=document.frmDatos.nombre.value;
+	var ciudad=document.frmDatos.ciudad.value;
+	var seccion=document.getElementById("secciones").value;
+	var cp=document.frmDatos.cp.value;
+  var txt;
+  var opcion=parseInt(document.frmDatos.emprendedor.value);
+  switch(opcion){
+  	case 1:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"grupo: Morat")) {
+    alert("Los datos de tu voto fueron registrados con exito");
+  } else {
+   alert("Ingrese sus datos de nuevo");
+  }
+  break;
+  case 2:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"grupo: DVCIO")) {
+    alert("Los datos de tu voto fueron registrados con exito");
+  } else {
+   alert("Ingrese sus datos de nuevo");
+  }
+  break;
+  case 3:
+  	   		 if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"grupo: Moderato")) {
+    alert("Los datos de tu voto fueron con exito");
+  } else {
+   alert("Ingrese sus datos de nuevo");
+  }
+  break;
+  case 4:
+           if (confirm("¿Tus datos son correctos? \n"+"Nombre: "+nombre+"\n"+"Ciudad: "+ciudad+"\n"+"Seccion: "+seccion+"\n"+"grupo: Los temerarios")) {
+    alert("Los datos de tu voto fueron registrados con exito");
+  } else {
+   alert("Ingrese sus datos de nuevo");
+  }
+  break;
+  default:
+  alert("Ingresa una opcion valida");
+  }
+ 
+  
+}
+</script>
+</body>
+</html>
